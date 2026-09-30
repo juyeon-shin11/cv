@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신주연 | Personal Profile</title>
+  <style>
+    :root { --ink:#383943; --side:#d8d8d8; --paper:#ffffff; --line:#b8b8b8; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f3f3f3; color:var(--ink); font-family:Arial,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .sheet { position:relative; display:grid; grid-template-columns:31% 69%; width:min(100%,820px); min-height:100vh; margin:0 auto; background:var(--paper); box-shadow:0 0 20px rgba(0,0,0,.08); }
+
+    /* Reference-like header: only the right column has the dark title bar. */
+    .topbar { grid-column:2; height:182px; padding:56px 40px 28px; color:#fff; background:var(--ink); }
+    .topbar h1 { margin:0; font-size:32px; line-height:1.1; letter-spacing:-1.4px; }
+    .topbar p { margin:11px 0 0; font-size:12px; letter-spacing:1.3px; }
+
+    .sidebar { grid-column:1; grid-row:1 / span 2; padding:185px 24px 42px; background:var(--side); }
+    .avatar { position:absolute; z-index:2; top:32px; left:5%; display:grid; width:152px; height:152px; place-items:center; overflow:hidden; border:6px solid #aaa; border-radius:50%; background:#ededed; }
+    .avatar svg { width:95px; height:95px; fill:#555761; }
+
+    .side-section { padding:25px 0 22px; border-bottom:1px solid #b0b0b0; }
+    .side-section h2, .main-section h2 { display:flex; align-items:center; gap:9px; margin:0 0 14px; font-size:18px; font-weight:800; letter-spacing:-.5px; }
+    .side-section h2::before, .main-section h2::before { display:inline-grid; width:23px; height:23px; place-items:center; border-radius:50%; background:var(--ink); color:#fff; font-size:13px; }
+    .contact h2::before { content:"●"; font-size:9px; }
+    .interests h2::before { content:"✦"; font-size:12px; }
+    .likes h2::before { content:"♥"; font-size:10px; }
+    .side-section p, .side-section li { margin:0; font-size:12px; line-height:1.7; }
+    .side-section ul { padding:0; margin:0; list-style:none; }
+    .side-section li + li { margin-top:4px; }
+
+    .main { grid-column:2; padding:25px 40px 52px; }
+    .main-section { padding:24px 0; border-bottom:1px solid #d2d2d2; }
+    .main-section h2 { margin-bottom:11px; }
+    .summary h2::before { content:"i"; font-family:Georgia,serif; font-weight:bold; }
+    .interests-main h2::before { content:"✦"; font-size:12px; }
+    .likes-main h2::before { content:"♥"; font-size:10px; }
+    .tools h2::before { content:"■"; font-size:9px; }
+    .films h2::before { content:"▶"; font-size:9px; }
+    .goal h2::before { content:"★"; font-size:11px; }
+    .main-section p { margin:0; font-size:12px; line-height:1.6; }
+    .school { display:block; margin-bottom:2px; font-size:13px; font-weight:700; }
+    .subtext { font-size:11px !important; font-style:italic; }
+    .film-list { padding:0; margin:0; list-style:none; }
+    .film-list li { position:relative; padding-left:14px; font-size:12px; line-height:1.85; }
+    .film-list li::before { position:absolute; left:0; content:"•"; }
+    .goal-text { font-size:15px !important; font-weight:700; line-height:1.5 !important; }
+
+    @media (max-width:600px) {
+      .sheet { display:block; min-height:100vh; }
+      .topbar { height:auto; min-height:160px; padding:42px 25px 30px 48%; }
+      .topbar h1 { font-size:25px; }
+      .avatar { top:28px; left:24px; width:118px; height:118px; border-width:5px; }
+      .avatar svg { width:74px; height:74px; }
+      .sidebar { padding:30px 24px; }
+      .main { padding:10px 24px 38px; }
+      .side-section { padding:20px 0; }
+      .main-section { padding:22px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header class="topbar">
+      <h1>신주연</h1>
+      <p>BUSINESS ADMINISTRATION · SENIOR</p>
+    </header>
+
+    <div class="avatar" aria-label="기본 프로필 이미지">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="22" r="12"></circle>
+        <path d="M11 58c1.6-14.2 10-22 21-22s19.4 7.8 21 22H11z"></path>
+      </svg>
+    </div>
+
+    <aside class="sidebar">
+      <section class="side-section contact">
+        <h2>CONTACT</h2>
+        <p>mihyehyang@gmail.com</p>
+      </section>
+      <section class="side-section education-side">
+        <h2>EDUCATION</h2>
+        <p><strong>경영학과 4학년</strong><br>Business Administration</p>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="main-section summary">
+        <h2>SUMMARY</h2>
+        <p>일상 속 작은 순간을 더 재미있고 의미 있게 만드는 아이디어를 고민하는 예비 기획자입니다.</p>
+      </section>
+      <section class="main-section interests-main">
+        <h2>INTERESTS</h2>
+        <p>기획, 마케팅</p>
+      </section>
+      <section class="main-section likes-main">
+        <h2>LIKES</h2>
+        <p>혼자 카페 가서 놀기, 영상 편집, 아무도 모르는 명곡 찾아보기</p>
+      </section>
+      <section class="main-section tools">
+        <h2>TOOLS</h2>
+        <p>Adobe Premiere Pro</p>
+      </section>
+      <section class="main-section films">
+        <h2>FAVORITE FILMS</h2>
+        <ul class="film-list">
+          <li>위대한 쇼맨</li>
+          <li>타짜</li>
+          <li>비긴 어게인</li>
+        </ul>
+      </section>
+      <section class="main-section goal">
+        <h2>GOAL</h2>
+        <p class="goal-text">일상에 변화를 주는 캠페인 기획하기</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
